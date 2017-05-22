@@ -5,17 +5,20 @@ function phoneListCtl($scope) {
     $scope.phones = [
         {
             "name": "Nexus S",
-            "snippt": "Fast just got faster with Nexus S."
+            "snippet": "Fast just got faster with Nexus S.",
+            "age":0
         },
         {
             "name":"Motorola XOOM with Wi-Fi",
-            "snippt":"The Next ,Next Generation tablet."
+            "snippet":"The Next ,Next Generation tablet.",
+            "age":1
         },
         {
             "name":"MOTOROLA XOOM",
-            "snippt":"The Next ,Next Generation tablet."
+            "snippet":"The Next ,Next Generation tablet.",
+            "age":2
         }
     ];
     $scope.hello="Hello , World!"
-
+    $scope.orderProp = 'age';
 }

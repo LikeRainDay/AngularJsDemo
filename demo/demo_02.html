@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="demo_02.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      var app=  angular.module("myApp", []);
+      app.controller('myCtrl',function ($scope) {
+          $scope.name = "John Doe";
+      });
+    </script>
+
+    <style>
+        input.ng-invalid{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body >
+    ---------------------------------
+    <form ng-app ="" name ="myForm">
+        Email:
+        <input type="email" name="myAdress" ng-model="text">
+        <span ng-show="myForm.myAdress.$error.email">不是一个合法的邮箱地址</span>
+    </form>
+     ---------------------------------
+    <div ng-app="myApp" ng-controller="myCtrl">
+        名字： <input ng-model="name">
+        <h1>你输入了:{{name}} {{ name }}</h1>
+    </div>
+   --------------------------------------
+    <form ng-app="chang_color">
+        输入你的名字:
+        <input name="myName" ng-model="myText" required>
+    </form>
+
+ --------------------------------
+    <phone-list>
+
+
+    </phone-list>
+
+</body>
+</html>
